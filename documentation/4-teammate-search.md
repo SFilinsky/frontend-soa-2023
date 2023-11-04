@@ -9,7 +9,11 @@ Can be done using plain HTML or Web Components since it won't contain much funct
 modules and auth.
 
 Authorisation will be done using [OAUTH 2.0](https://developers.google.com/identity/protocols/oauth2/javascript-implicit-flow).
-Auth module is responsive for collecting user data and handling auth, but
+
+## Auth module
+
+Auth module is responsive for collecting user data and handling auth, but auth info is stored and shared by container
+on server-side.
 
 ## Search info form module
 
