@@ -1,0 +1,25 @@
+{
+  "name": "frontend-soa-2023",
+  "version": "0.0.1",
+  "description": "This is my learning project. There are two goals behind it:\r - extend my frontend knowledge and extend my knowledge of things I didn't use much\r - showcase my skills (including system design, coding, testing and automation)",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SFilinsky/frontend-soa-2023.git"
+  },
+  "author": "Siarhei Filinski",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SFilinsky/frontend-soa-2023/issues"
+  },
+  "homepage": "https://github.com/SFilinsky/frontend-soa-2023#readme",
+  "dependencies": {
+
+  },
+  "devDependencies": {
+
+  }
+}
