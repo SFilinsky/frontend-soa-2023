@@ -4,9 +4,9 @@ This document defines reasoning and requirements behind project.
 
 ## Project description
 
-The application is platform for finding teammates when playing online games. Kinda "Tinder for gamers".
+The application is platform for finding teammates when playing online games (aka "Tinder for gamers" :D).
 
-Application is web-based and should be available from phone.
+Application is web-based and should support phone browsers.
 
 It should contain landing page that includes marketing info and allows users to enter main experience + 
 meta information about project, it's purpose and developers.
@@ -17,7 +17,7 @@ Main part of application should allow player to search other players by game nam
 or expose themselves to others looking for teammates. Results should be dynamically updated.
 User can send other users proposal to join party, but they should handle it themselves in game.
 
-If user is AFK for longer then 5 minutes, application should automatically remove him from search and disconnect.
+If user is AFK for longer then 5 minutes, application should automatically remove him from search queue and disconnect.
 
 ## Requirements
 
@@ -36,6 +36,10 @@ User interface should:
 
 Linting should be set up for all submodules.
 
+### Localisation
+
+Application should be fully localised.
+
 ### Testing
 
 The code should be covered with all layers of tests: E2E, Integration, Unit.
@@ -43,7 +47,7 @@ The code should be covered with all layers of tests: E2E, Integration, Unit.
 ## Performance
 
 Utilise optimisation techniques like [progressive hydration](https://www.patterns.dev/posts/progressive-hydration),
-measurements with [Core Web Vitals](https://web.dev/vitals/)
+measurements with [Core Web Vitals](https://web.dev/vitals/).
 
 ### Maintainability
 
