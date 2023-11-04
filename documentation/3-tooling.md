@@ -1,4 +1,4 @@
-# UI development choices
+# Tooling choices
 
 ## React
 

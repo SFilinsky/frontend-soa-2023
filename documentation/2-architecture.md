@@ -1,6 +1,7 @@
+# Architecture
+
 System contains two fundamentally different parts, which should be extracted into separate applications 
 for easier maintenance.
-
 
 ## Landing app
 

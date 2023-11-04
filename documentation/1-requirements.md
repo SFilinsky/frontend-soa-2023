@@ -1,3 +1,7 @@
+# Requirements
+
+This document defines reasoning and requirements behind project.
+
 ## Project description
 
 The application is platform for finding teammates when playing online games. Kinda "Tinder for gamers".
