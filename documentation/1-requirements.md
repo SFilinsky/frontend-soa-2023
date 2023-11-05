@@ -36,6 +36,10 @@ User interface should:
 
 Linting should be set up for all submodules.
 
+### Analytics
+
+Application usage should be tracked by analytics platform.
+
 ### Localisation
 
 Application should be fully localised.
