@@ -4,7 +4,7 @@
   "description": "This is my learning project. There are two goals behind it:\r - extend my frontend knowledge and extend my knowledge of things I didn't use much\r - showcase my skills (including system design, coding, testing and automation)",
   "main": "index.js",
   "scripts": {
-    "test": "test"
+    "dev": "yarn --cwd packages/teammate-search/container dev"
   },
   "repository": {
     "type": "git",
@@ -15,11 +15,5 @@
   "bugs": {
     "url": "https://github.com/SFilinsky/frontend-soa-2023/issues"
   },
-  "homepage": "https://github.com/SFilinsky/frontend-soa-2023#readme",
-  "dependencies": {
-
-  },
-  "devDependencies": {
-
-  }
+  "homepage": "https://github.com/SFilinsky/frontend-soa-2023#readme"
 }
