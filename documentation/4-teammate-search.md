@@ -15,6 +15,7 @@ initial load while submodules can be loaded dynamically.
 are used.
 6. Shared events are separate package: submodules cannot have dependencies on container, only on events defined in 
 common shared package
+7. It should be possible to run each submodule on its own for development
 
 ## Submodule integration
 
@@ -27,7 +28,7 @@ For that reason, there will be shared package that will provide common basis for
 
 ## Shared events
 
-There is separate package that defines list of events available to all microfrontends. 
+There is separate package that defines list of events available to all micro frontends. 
 
 It's needed to allow easily track event usages (when they are created or listened to), while reducing direct 
 communication between teams since it's not directly part of container or submodules.  
