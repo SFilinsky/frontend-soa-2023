@@ -1,32 +1,29 @@
 /** @type {import('next').NextConfig} */
 
-const { NextFederationPlugin } = require("@module-federation/nextjs-mf");
+const { ModuleFederationPlugin } = require('webpack').container;
+const { merge } = require('webpack-merge');
+const {getSharedDependenciesList} = require("../../../shared/webpack-utils");
 
 const getRemotes = (isServer) => {
     const location = isServer ? 'ssr' : 'chunks';
     return {
         // specify remotes
-        auth: `auth@http://localhost:3001/_next/static/${location}/remoteEntry.js`,
+        // auth: `auth@http://localhost:3001/_next/static/${location}/remoteEntry.js`,
     };
 }
 
 module.exports = {
     reactStrictMode: true,
-    webpack: (config, options) => {
-        const { isServer } = options;
-
-        config.plugins.push(
-            new NextFederationPlugin({
-                name: "container",
-                filename: "static/runtime/app2remoteEntry.js",
-                remotes: getRemotes(isServer),
-                exposes: {
-
-                },
-                shared: [ 'react-dom' ]
-            }),
-        )
-
-        return config;
-    }
+    webpack: (config, options) => merge(
+        config,
+        {
+            plugins: [
+                new ModuleFederationPlugin({
+                    name: 'container',
+                    remotes: getRemotes(options.isServer),
+                    shared: getSharedDependenciesList()
+                }),
+            ]
+        }
+    ),
 }
