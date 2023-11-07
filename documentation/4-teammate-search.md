@@ -11,8 +11,10 @@ loaded to the page through abstract API.
 initial load while submodules can be loaded dynamically.
 3. Runtime Integration: submodules are integrated in runtime. More about that in [Integration section](#Submodule-integration).
 4. No shared state: if some data needs to be exchanged - functionality should be explicitly provided by container.
-5. Container can have dependencies on submodules API.
-6. Submodules cannot have dependencies on container, only on events defined in common shared package.
+5. Container can have dependencies on submodules API: submodules shouldn't be directly dependent on context where they
+are used.
+6. Shared events are separate package: submodules cannot have dependencies on container, only on events defined in 
+common shared package
 
 ## Submodule integration
 
