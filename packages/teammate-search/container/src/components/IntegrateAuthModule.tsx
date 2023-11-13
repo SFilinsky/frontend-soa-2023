@@ -1,8 +1,7 @@
 'use client'
 
 import React from 'react';
-
-import IntegrateModule from "@/components/IntegrateModule";
+import IntegrateModule from "./IntegrateModule";
 
 const IntegrateAuthModule = () => {
     return (
