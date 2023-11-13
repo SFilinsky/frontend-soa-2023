@@ -2,10 +2,7 @@
   "name": "frontend-soa-2023",
   "version": "0.0.1",
   "description": "This is my learning project. There are two goals behind it:\r - extend my frontend knowledge and extend my knowledge of things I didn't use much\r - showcase my skills (including system design, coding, testing and automation)",
-  "main": "index.js",
-  "scripts": {
-    "dev": "yarn --cwd packages/teammate-search/container dev"
-  },
+  "private": true,
   "repository": {
     "type": "git",
     "url": "git+https://github.com/SFilinsky/frontend-soa-2023.git"
@@ -15,5 +12,23 @@
   "bugs": {
     "url": "https://github.com/SFilinsky/frontend-soa-2023/issues"
   },
-  "homepage": "https://github.com/SFilinsky/frontend-soa-2023#readme"
+  "homepage": "https://github.com/SFilinsky/frontend-soa-2023#readme",
+  "workspaces": [
+    "packages/landing",
+    "packages/teammate-search/container",
+    "packages/teammate-search/auth",
+    "packages/teammate-search/microfrontends-kit"
+  ],
+  "scripts": {
+    "dev": "yarn --cwd packages/teammate-search/container dev",
+    "build": "echo Not implemented yet",
+    "changeset": "changeset",
+    "prerelease": "yarn build && yarn test",
+    "release": "changeset publish"
+  },
+  "dependencies": {
+    "@changesets/changelog-github": "^0.4.8",
+    "@changesets/cli": "^2.26.2"
+  },
+  "packageManager": "yarn@4.0.1"
 }
