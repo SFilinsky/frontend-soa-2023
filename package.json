@@ -20,7 +20,9 @@
     "packages/teammate-search/microfrontends-kit"
   ],
   "scripts": {
-    "dev": "yarn --cwd packages/teammate-search/container dev",
+    "dev": "yarn dev:container & yarn dev:auth",
+    "dev:container": "yarn --cwd packages/teammate-search/container start",
+    "dev:auth": "yarn --cwd packages/teammate-search/auth start",
     "build": "echo Not implemented yet",
     "changeset": "changeset",
     "prerelease": "yarn build && yarn test",
