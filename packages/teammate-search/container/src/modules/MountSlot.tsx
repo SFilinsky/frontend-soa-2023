@@ -1,12 +1,11 @@
-'use client'
-
 import React, {useRef, useEffect, RefObject} from "react";
 
 interface Props {
+    source: string,
     mount: (element: HTMLElement) => void
 }
 
-export default function IntegrateModule ({ mount } : Props) {
+export default function MountSlot ({ source, mount } : Props) {
     const ref = useRef(null) as RefObject<HTMLDivElement>;
 
     useEffect(() => {
@@ -16,5 +15,5 @@ export default function IntegrateModule ({ mount } : Props) {
         }
     });
 
-    return <div ref={ref} />;
+    return <div data-source={source} ref={ref} />;
 }
