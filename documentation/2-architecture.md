@@ -35,8 +35,22 @@ communicate with modules and progress user experience depending on results.
 #### Backend
 
 Backend is not this project goal, so it should only use in-memory state with few endpoints, resetting state if 
-service stops. 
+service stops.
 
-Potentially some metadata-based rendering will be required, meaning there will be list of configurations for specific
-games on backend, that will be transferred to client. Based on provided configuration form with questions to user might
-vary.
+What IS important - backend should follow frontend architecture to minimise communication between teams.
+
+There are several important points for it:
+- architecture should minimise consumption surface - as few teams and modules should rely on service as possible
+- architecture should keep consumption explicit - it should be easy to detect how service is consumed to identify
+usage places and patterns to further improve overall project organisation
+
+Based on those requirements, there are several potential options:
+- microservices, one per frontend module + several platform-level services with wider dependencies.
+- graphql through Apollo Client, using Apollo Gateway to combine federated schemas that come 
+  from several individual services.
+  - this option also solves problem of dynamic data update, since Apollo Client includes
+    [Subscriptions](https://www.apollographql.com/docs/react/data/subscriptions/).
+
+I'm going to use option 2 for the reason of great tooling support with React, which I'm going to use 
+for all microfrontend modules. It will save a lot of dev time which microservices would require, also providing 
+solutions to caching and so on.

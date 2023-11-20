@@ -48,10 +48,16 @@ Application should be fully localised.
 
 The code should be covered with all layers of tests: E2E, Integration, Unit.
 
-## Performance
+### Performance
 
 Utilise optimisation techniques like [progressive hydration](https://www.patterns.dev/posts/progressive-hydration),
 measurements with [Core Web Vitals](https://web.dev/vitals/).
+
+### Monitoring and Logging
+
+System should collect information about failures that happen client- and server-side to allow quick resolution of 
+occurring issues even before they are reported by client.
+
 
 ### Maintainability
 

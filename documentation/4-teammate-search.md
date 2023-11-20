@@ -3,6 +3,10 @@
 Teammate search will contain several modules, each of them having its own responsibility and a team that
 will maintain it. Perfectly each team should maintain one or little amount of simpler modules.
 
+Potentially some metadata-based rendering will be required, meaning there will be list of configurations for specific
+games on backend, that will be transferred to client. Based on provided configuration form with questions to user might
+vary.
+
 ## Module requirements
 
 1. Agnostic: submodules should not expose implementation details, meaning it should be initialised and 
