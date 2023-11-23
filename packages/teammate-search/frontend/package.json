@@ -1,10 +1,11 @@
 {
-  "name": "@frontend-soa-2023/teammate-search",
+  "name": "@teammate-search/frontend",
   "version": "0.0.1",
   "private": true,
   "workspaces": [
-    "frontend",
-    "backend"
+    "auth",
+    "container",
+    "microfrontends-kit"
   ],
   "devDependencies": {
     "concurrently": "^8.2.2"

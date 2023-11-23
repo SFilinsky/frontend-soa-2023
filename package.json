@@ -15,15 +15,12 @@
   "homepage": "https://github.com/SFilinsky/frontend-soa-2023#readme",
   "workspaces": [
     "packages/landing",
-    "packages/teammate-search/container",
-    "packages/teammate-search/auth",
-    "packages/teammate-search/microfrontends-kit"
+    "packages/teammate-search"
   ],
+  "packageManager": "yarn@4.0.1",
   "scripts": {
-    "dev": "yarn dev:container & yarn dev:auth",
-    "dev:container": "yarn --cwd packages/teammate-search/container start",
-    "dev:auth": "yarn --cwd packages/teammate-search/auth start",
     "build": "echo Not implemented yet",
+    "dev:all": "yarn workspaces foreach --all --parallel run dev",
     "changeset": "changeset",
     "prerelease": "yarn build && yarn test",
     "release": "changeset publish"
@@ -32,5 +29,7 @@
     "@changesets/changelog-github": "^0.4.8",
     "@changesets/cli": "^2.26.2"
   },
-  "packageManager": "yarn@4.0.1"
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
 }

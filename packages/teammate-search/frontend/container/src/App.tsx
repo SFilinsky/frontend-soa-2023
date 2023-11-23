@@ -5,13 +5,13 @@ import IntegrateModule from "./modules/IntegrateModule";
 
 function App() {
 
-  const [ isAuthIntegrated, setIsAuthIntegrated ] = useState(false);
+  const [ isAuthIntegrated, setIsAuthIntegrated ] = useState(true);
 
   return (
     <div className="App">
       <header className="App-header">
         Container
-        <button onClick={() => setIsAuthIntegrated(true)}>Integrate Auth</button>
+        {/*<button onClick={() => setIsAuthIntegrated(true)}>Integrate Auth</button>*/}
         { isAuthIntegrated && <IntegrateModule submoduleName="auth"/>}
       </header>
     </div>

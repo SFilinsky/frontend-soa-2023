@@ -1605,6 +1605,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@babel/runtime@npm:^7.21.0":
+  version: 7.23.4
+  resolution: "@babel/runtime@npm:7.23.4"
+  dependencies:
+    regenerator-runtime: "npm:^0.14.0"
+  checksum: db2bf183cd0119599b903ca51ca0aeea8e0ab478a16be1aae10dd90473ed614159d3e5adfdd8f8f3d840402428ce0d90b5c01aae95da9e45a2dd83e02d85ca27
+  languageName: node
+  linkType: hard
+
 "@babel/template@npm:^7.22.15, @babel/template@npm:^7.3.3":
   version: 7.22.15
   resolution: "@babel/template@npm:7.22.15"
@@ -2123,6 +2132,30 @@ __metadata:
   checksum: d29f6c207b2f6dc4ef174d16a3c07b0d3a17ca3d805680496ff267edd773e3bac41db4e7dcab622ca1970d892535bd19671e2a756d4eac75e96fd8c8dcdb619b
   languageName: node
   linkType: hard
+
+"@frontend-soa-2023/landing@workspace:packages/landing":
+  version: 0.0.0-use.local
+  resolution: "@frontend-soa-2023/landing@workspace:packages/landing"
+  dependencies:
+    "@types/node": "npm:^20"
+    "@types/react": "npm:^18"
+    "@types/react-dom": "npm:^18"
+    eslint: "npm:^8"
+    eslint-config-next: "npm:13.5.4"
+    next: "npm:13.5.4"
+    react: "npm:^18"
+    react-dom: "npm:^18"
+    typescript: "npm:^5"
+  languageName: unknown
+  linkType: soft
+
+"@frontend-soa-2023/teammate-search@workspace:packages/teammate-search":
+  version: 0.0.0-use.local
+  resolution: "@frontend-soa-2023/teammate-search@workspace:packages/teammate-search"
+  dependencies:
+    concurrently: "npm:^8.2.2"
+  languageName: unknown
+  linkType: soft
 
 "@humanwhocodes/config-array@npm:^0.11.13":
   version: 0.11.13
@@ -2982,9 +3015,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@teammate-search/auth@workspace:packages/teammate-search/auth":
+"@teammate-search/auth@workspace:packages/teammate-search/frontend/auth":
   version: 0.0.0-use.local
-  resolution: "@teammate-search/auth@workspace:packages/teammate-search/auth"
+  resolution: "@teammate-search/auth@workspace:packages/teammate-search/frontend/auth"
   dependencies:
     "@babel/core": "npm:^7.16.0"
     "@pmmmwh/react-refresh-webpack-plugin": "npm:^0.5.3"
@@ -3047,9 +3080,17 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@teammate-search/container@workspace:packages/teammate-search/container":
+"@teammate-search/backend@workspace:packages/teammate-search/backend":
   version: 0.0.0-use.local
-  resolution: "@teammate-search/container@workspace:packages/teammate-search/container"
+  resolution: "@teammate-search/backend@workspace:packages/teammate-search/backend"
+  dependencies:
+    concurrently: "npm:^8.2.2"
+  languageName: unknown
+  linkType: soft
+
+"@teammate-search/container@workspace:packages/teammate-search/frontend/container":
+  version: 0.0.0-use.local
+  resolution: "@teammate-search/container@workspace:packages/teammate-search/frontend/container"
   dependencies:
     "@babel/core": "npm:^7.16.0"
     "@pmmmwh/react-refresh-webpack-plugin": "npm:^0.5.3"
@@ -3113,9 +3154,17 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@teammate-search/microfrontends-kit@workspace:packages/teammate-search/microfrontends-kit":
+"@teammate-search/frontend@workspace:packages/teammate-search/frontend":
   version: 0.0.0-use.local
-  resolution: "@teammate-search/microfrontends-kit@workspace:packages/teammate-search/microfrontends-kit"
+  resolution: "@teammate-search/frontend@workspace:packages/teammate-search/frontend"
+  dependencies:
+    concurrently: "npm:^8.2.2"
+  languageName: unknown
+  linkType: soft
+
+"@teammate-search/microfrontends-kit@workspace:packages/teammate-search/frontend/microfrontends-kit":
+  version: 0.0.0-use.local
+  resolution: "@teammate-search/microfrontends-kit@workspace:packages/teammate-search/frontend/microfrontends-kit"
   languageName: unknown
   linkType: soft
 
@@ -5398,6 +5447,26 @@ __metadata:
   languageName: node
   linkType: hard
 
+"concurrently@npm:^8.2.2":
+  version: 8.2.2
+  resolution: "concurrently@npm:8.2.2"
+  dependencies:
+    chalk: "npm:^4.1.2"
+    date-fns: "npm:^2.30.0"
+    lodash: "npm:^4.17.21"
+    rxjs: "npm:^7.8.1"
+    shell-quote: "npm:^1.8.1"
+    spawn-command: "npm:0.0.2"
+    supports-color: "npm:^8.1.1"
+    tree-kill: "npm:^1.2.2"
+    yargs: "npm:^17.7.2"
+  bin:
+    conc: dist/bin/concurrently.js
+    concurrently: dist/bin/concurrently.js
+  checksum: 0e9683196fe9c071d944345d21d8f34aa6c0cc50c0dd897e95619f2f1c9eb4871dca851b2569da17888235b7335b4c821ca19deed35bebcd9a131ee5d247f34c
+  languageName: node
+  linkType: hard
+
 "confusing-browser-globals@npm:^1.0.11":
   version: 1.0.11
   resolution: "confusing-browser-globals@npm:1.0.11"
@@ -5874,6 +5943,15 @@ __metadata:
   version: 1.4.0
   resolution: "dataloader@npm:1.4.0"
   checksum: 5fa4c843b9e60195092f1fc7e2acaff318ed46886dc670ddff683bc560f12d4079e6d1e77749501b7e111a8582d26a2aa2a2fbe6d7d5e1520cef64f4e1fd242d
+  languageName: node
+  linkType: hard
+
+"date-fns@npm:^2.30.0":
+  version: 2.30.0
+  resolution: "date-fns@npm:2.30.0"
+  dependencies:
+    "@babel/runtime": "npm:^7.21.0"
+  checksum: e4b521fbf22bc8c3db332bbfb7b094fd3e7627de0259a9d17c7551e2d2702608a7307a449206065916538e384f37b181565447ce2637ae09828427aed9cb5581
   languageName: node
   linkType: hard
 
@@ -7471,6 +7549,7 @@ __metadata:
   dependencies:
     "@changesets/changelog-github": "npm:^0.4.8"
     "@changesets/cli": "npm:^2.26.2"
+    concurrently: "npm:^8.2.2"
   languageName: unknown
   linkType: soft
 
@@ -9712,22 +9791,6 @@ __metadata:
   checksum: 94eed2c6c2ce99f409df9186a96340558897b3e62a85afdc1ee39103954d2ebe1c1c4e9fe2b0952771771fa96d70055ede8b27962a7021406374fdb695fd4d01
   languageName: node
   linkType: hard
-
-"landing@workspace:packages/landing":
-  version: 0.0.0-use.local
-  resolution: "landing@workspace:packages/landing"
-  dependencies:
-    "@types/node": "npm:^20"
-    "@types/react": "npm:^18"
-    "@types/react-dom": "npm:^18"
-    eslint: "npm:^8"
-    eslint-config-next: "npm:13.5.4"
-    next: "npm:13.5.4"
-    react: "npm:^18"
-    react-dom: "npm:^18"
-    typescript: "npm:^5"
-  languageName: unknown
-  linkType: soft
 
 "language-subtag-registry@npm:^0.3.20":
   version: 0.3.22
@@ -12713,6 +12776,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"rxjs@npm:^7.8.1":
+  version: 7.8.1
+  resolution: "rxjs@npm:7.8.1"
+  dependencies:
+    tslib: "npm:^2.1.0"
+  checksum: 3c49c1ecd66170b175c9cacf5cef67f8914dcbc7cd0162855538d365c83fea631167cacb644b3ce533b2ea0e9a4d0b12175186985f89d75abe73dbd8f7f06f68
+  languageName: node
+  linkType: hard
+
 "safe-array-concat@npm:^1.0.0, safe-array-concat@npm:^1.0.1":
   version: 1.0.1
   resolution: "safe-array-concat@npm:1.0.1"
@@ -13231,6 +13303,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"spawn-command@npm:0.0.2":
+  version: 0.0.2
+  resolution: "spawn-command@npm:0.0.2"
+  checksum: b22f2d71239e6e628a400831861ba747750bbb40c0a53323754cf7b84330b73d81e40ff1f9055e6d1971818679510208a9302e13d9ff3b32feb67e74d7a1b3ef
+  languageName: node
+  linkType: hard
+
 "spawndamnit@npm:^2.0.0":
   version: 2.0.0
   resolution: "spawndamnit@npm:2.0.0"
@@ -13652,7 +13731,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"supports-color@npm:^8.0.0":
+"supports-color@npm:^8.0.0, supports-color@npm:^8.1.1":
   version: 8.1.1
   resolution: "supports-color@npm:8.1.1"
   dependencies:
@@ -13991,6 +14070,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"tree-kill@npm:^1.2.2":
+  version: 1.2.2
+  resolution: "tree-kill@npm:1.2.2"
+  bin:
+    tree-kill: cli.js
+  checksum: 7b1b7c7f17608a8f8d20a162e7957ac1ef6cd1636db1aba92f4e072dc31818c2ff0efac1e3d91064ede67ed5dc57c565420531a8134090a12ac10cf792ab14d2
+  languageName: node
+  linkType: hard
+
 "trim-newlines@npm:^3.0.0":
   version: 3.0.1
   resolution: "trim-newlines@npm:3.0.1"
@@ -14040,7 +14128,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"tslib@npm:^2.0.3, tslib@npm:^2.4.0":
+"tslib@npm:^2.0.3, tslib@npm:^2.1.0, tslib@npm:^2.4.0":
   version: 2.6.2
   resolution: "tslib@npm:2.6.2"
   checksum: e03a8a4271152c8b26604ed45535954c0a45296e32445b4b87f8a5abdb2421f40b59b4ca437c4346af0f28179780d604094eb64546bee2019d903d01c6c19bdb
@@ -15319,7 +15407,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"yargs@npm:^17.7.1":
+"yargs@npm:^17.7.1, yargs@npm:^17.7.2":
   version: 17.7.2
   resolution: "yargs@npm:17.7.2"
   dependencies:

@@ -1,11 +1,7 @@
 {
-  "name": "@frontend-soa-2023/teammate-search",
+  "name": "@teammate-search/backend",
   "version": "0.0.1",
   "private": true,
-  "workspaces": [
-    "frontend",
-    "backend"
-  ],
   "devDependencies": {
     "concurrently": "^8.2.2"
   }
